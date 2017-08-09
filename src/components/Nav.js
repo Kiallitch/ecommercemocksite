@@ -8,25 +8,26 @@ class NavBar extends Component {
       fontFamily:"Faster One",
       fontSize:"1.5em",
       padding:0,
-      color:"red"
+      color:"#FFF"
     }
 
     return (
       <div>
-        <nav className="navbar navbar-toggleable-md fixed-top navbar-light" style={{backgroundColor:"#FFCC00"}}>
-          <a className="navbar-brand" href="/"><span style={brandStyle}>Arise</span></a>
+        <nav className="navbar navbar-toggleable-md fixed-top navbar-light" style={{backgroundColor:"#000"}}>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-
-            <div className="navbar-nav">
-              <NavLink activeClassName="selected" className="nav-item nav-link" to="/about">Characters</NavLink>
-              <NavLink activeClassName="selected" className="nav-item nav-link" to="/contact">Story</NavLink>
-              <NavLink activeClassName="selected" className="nav-item nav-link" to="/details">Dungeons</NavLink>
+            <div className="navbar-nav mr-auto">
+              <NavLink activeClassName="selected" className="nav-item nav-link" to="/">Arise</NavLink>
+              <NavLink activeClassName="selected" className="nav-item nav-link" to="/Characters">Characters</NavLink>
+              <NavLink activeClassName="selected" className="nav-item nav-link" to="/Armory">Armory</NavLink>
+              <NavLink activeClassName="selected" className="nav-item nav-link" to="/Weapons">Weapons</NavLink>
             </div>
+
           </div>
         </nav>
           {this.props.children}
-        <footer className="navbar fixed-bottom navbar-light" style={{backgroundColor: "#FFCC00"}}>
+        <footer className="navbar fixed-bottom navbar-light" style={{backgroundColor: "#000"}}>
             <div className="navbar-nav">
+              <p className="navbar-text" style={{margin:"auto"}}>© 2017 Arise All rights reserved.</p>
             </div>
         </footer>
       </div>

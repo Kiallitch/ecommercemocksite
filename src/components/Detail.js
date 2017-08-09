@@ -8,10 +8,10 @@ const Detail = (props) => {
     <div className="col-sm-6 mx-auto">
       <div className="card " style={{marginTop: 20,}}>
         <div className="card-block">
-          <p className="card-text">Name: {detail.name}</p>
+          <img className="card-image-top" src={detail.image} alt={detail.imageAlt} style={{width:"250px", float:"left"}} />
+          <h4 className="card-title">{detail.name}</h4>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Quests: {detail.mainquests}</li>
-            <li className="list-group-item">Map: {detail.map}</li>
+            <li className="list-group-item text-left">{detail.details}</li>
           </ul>
         </div>
       </div>

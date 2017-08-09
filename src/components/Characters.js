@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import characters from "../data/characters.js";
 
-const About = () => {
+class Characters extends Component {
+  render() {
 
-  return (
-    <div className="container" style={{marginTop:100}}>
-      <h1>Characters</h1>
+    let match = this.props.match;
 
-      <p align="justify">Aleksei - The daughter of a crazed Felina, who set a plan in motion for her to follow.  She was raised by raiders, seeing things she will never be able to unsee.  Her own kind, in chains.  Often she would wonder why she was treated so differently.  She decided one-day she had enough and released anyone in the raiders harsh custody.</p>
+    let navTools = characters.map((tool) => {
+      return(
+        <div key={tool.id} className="col-sm-4">
+          <div className="card" style={{marginTop: 20}}>
+            <img className="card-image-top" src={tool.image} alt={tool.imageAlt} style={{width: "150px", margin:"auto"}} />
+            <div className="card-block">
+                <h4 className="card-title">{tool.name}</h4>
+                <p className="card-text" style={{color:"red", fontSize:"1.3em"}}><strong>{tool.price}</strong></p>
+            </div>
 
-      <p align="justify">Henry - A soldier who died near the end of the war against mages (most of them).  He was honored, respected, and when it was all over he was tossed in a lab and experimented on by geneticists.  He became a mage himself, but retained his desire to help people.  He definitely has a need to save damsels, causing him to find out the "damsels" are more capable of handling themselves most of the time.</p>
-    </div>
-  );
-};
-export default About;
+          </div>
+        </div>
+      )
+    });
+    return (
+      <div className="card-deck-wrapper" style={{marginLeft: 25, marginRight: 25, marginTop: 70, marginBottom: 100}}>
+        <div className="card-deck">
+          {navTools}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Characters;

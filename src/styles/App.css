@@ -3,6 +3,22 @@
   justify-content: space-between;
 }
 
+.card {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  text-align: center;
+}
+
 .App {
   text-align: center;
 }
@@ -13,10 +29,10 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #000;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: #FFF;
 }
 
 .App-intro {
